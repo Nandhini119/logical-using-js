@@ -6,53 +6,49 @@
 // Expected output:
 // [ 'Arun','Ashish','Kalyani','David','Priya','Venkat' ]
 
-var myObj =[{'name':'Arun', 'age': 30, 'occupation': "Developer"},
-{'name':'Ashish', 'age': 32, 'occupation': "Developer"},
-{'name':'Kalyani', 'age': 25, 'occupation': "Programmer"},
-{'name':'David', 'age': 27, 'occupation': "Programmer"},
-{'name':'Priya', 'age': 22, 'occupation': "Programmer"},
-{'name':'Venkat', 'age': 28, 'occupation': "Programmer"}];
-//q15.a
-var occupationarr1=[];
-for(var i=0;i<myObj.length;i++)
+let myObj = [{'name' : 'Arun', 'age' : 30, 'occupation' : 'Developer'},
+{'name' : 'Ashish', 'age' : 32, 'occupation' : 'Developer'},
+{'name' : 'Kalyani', 'age' : 25, 'occupation' : 'Programmer'},
+{'name' : 'David', 'age' : 27, 'occupation' : 'Programmer'},
+{'name' : 'Priya', 'age' : 22, 'occupation' : 'Programmer'},
+{'name' : 'Venkat', 'age' : 28, 'occupation' : 'Programmer'}];
+// q15.a
+let occupationarr1 = [];
+for(let i = 0 ; i < myObj.length; i++)
 {
-    if(myObj[i].occupation =="Programmer" )
+    if(myObj[i].occupation == 'Programmer' )
     {
-      occupationarr1.push({name:myObj[i].name,age:myObj[i].age,occupation:myObj[i].occupation});
-       
-    }
+      occupationarr1.push({name : myObj[i].name, age : myObj[i].age, occupation : myObj[i].occupation});
+     }
 }
-var set=new Set();
-for(var a of myObj){
+let set=new Set();
+for(let a of myObj) {
     set.add(a.occupation);
-    
 }
-occupationArr=Array.from(set);  
+occupationArr = Array.from(set);  
 
-//q15.b
-var sortMyObj=myObj.sort(function(a,b){
-    return b.age-a.age;
-})
+// q15.b
+let sortMyObj = myObj.sort(function(a, b) {
+    return b.age - a.age;
+});
 
 
-//q15.c
-var newObj={};
-for(var ocup of set){
-        newObj[ocup]=[];
-        for(var emp of myObj){
-            if(emp.occupation==ocup){
-                newObj[ocup].push({name:emp.name,age:emp.age});
+// q15.c
+let newObj = {};
+for(let ocup of set) {
+        newObj[ocup] = [];
+        for(let emp of myObj) {
+            if(emp.occupation == ocup) {
+                newObj[ocup].push({name:emp.name, age:emp.age});
             }
         }
     }
-console.log(newObj );
-//q15.d
-var namearray=myObj.map(function(arr1)
+// q15.d
+let namearray = myObj.map(function(arr1)
 {
-    return arr1.name});
-    console.log(namearray);
-
-module.exports = {
+    return arr1.name;
+    });
+  module.exports = {
   c: occupationArr,
   d: newObj,
   e: namearray

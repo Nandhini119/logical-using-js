@@ -1,6 +1,6 @@
-//Q1. Write a program to display the current date in the following format mm/dd/yyyy?
+ // Q1. Write a program to display the current date in the following format mm/dd/yyyy?
 
-//Test Case for Q1
+ // Test Case for Q1
 // let chai = require('chai');
 // let expect = chai.expect;
 // var store = [];
@@ -29,18 +29,18 @@ let chai = require('chai');
 let expect = chai.expect;
 let index = require('../solutions/q1');
 
-function getDate(){
-  var date=new Date();
-  var d=date.getDate();
-  var m=date.getMonth()+1;
-  var y=date.getFullYear();
-  return m+"/"+d+"/"+y;
+function getDate()  {
+  let date = new Date();
+  let d = date.getDate();
+  let m = date.getMonth()+1;
+  let y = date.getFullYear();
+  return m + '/' + d + '/' + y;
 }
-describe('Question 1 - Test code for correct output', function(){
-  it ('Matches the desired output', function(done){
-    index(function(data){
+describe('Question 1 - Test code for correct output', function()  {
+ it ('Matches the desired output', function(done)  {
+    index(function(data)  {
       expect(data).to.deep.equal(getDate());
       done();
-    })
+    });
   });
 });

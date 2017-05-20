@@ -3,11 +3,11 @@
 Expected Output: 'abeemrstw
 */
 
-var string='webmaster';
+let string = 'webmaster';
 function sortstring(string)
 {
-         var arraySplit = string.split("").sort().join("");
+         let arraySplit = string.split("").sort().join("");
 
         return arraySplit;
 }
-console.log(sortstring(string));
+sortstring(string);

@@ -1,4 +1,4 @@
-//Q7. Write a function to sort the following array of objects by its key value (example key as year)?
+// Q7. Write a function to sort the following array of objects by its key value (example key as year)?
 
 const library = [
   { film: 'Lagaan', rating: '5', year: 2003},
@@ -7,7 +7,6 @@ const library = [
 ];
 
 let compare = function(a, b) {
-return a.year-b.year;
-
-}
+return a.year - b.year;
+};
 module.exports = library.sort(compare);

@@ -1,21 +1,20 @@
-//Q14.  Write a program to build a (pyramid) of "*" for a given number of rows. for example rows = 6 ?
+// Q14.  Write a program to build a (pyramid) of "*" for a given number of rows. for example rows = 6 ?
 
-//Write your code here
+// Write your code here
 function drawpyramid(row)
 {
-	var n=row;
+	let n = row;
 	
-	for(var i=0;i<n;i++)
+	for(let i = 0; i < n; i++)
 	{
-	    var s=" ";
-         for(var j=0;j<n-i;j++)
+	    let s = ' ';
+         for(let j = 0; j < n - i; j++)
          {
-            s=s+" ";         
+            s = s +' ';         
          }
-        for(var k=0;k<=i;k++)
+        for(let k = 0; k < = i; k++)
         {
-            s=s+"$";
-       
+            s = s +'$';
         }
    console.log(s);     
     }

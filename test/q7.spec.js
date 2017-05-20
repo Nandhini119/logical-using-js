@@ -8,15 +8,13 @@ const lib = [
 ];
 
 let index = require('../solutions/q7');
-describe('Question 7 - Test code for correct output', function(){
-  it ('Test whether the output is an object or not', function(done){
-     expect(typeof(index)).to.deep.equal("object");
+describe('Question 7 - Test code for correct output', function()  {
+ it ('Test whether the output is an object or not', function(done)  {
+     expect(typeof index).to.deep.equal("object");
     done();
    });
-
-  it ('Matches the desired output as per given input test case', function(done){
+  it ('Matches the desired output as per given input test case', function(done)  {
     expect(index).to.deep.equal(lib);
     done();
   });
-
 });
